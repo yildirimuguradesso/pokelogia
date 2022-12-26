@@ -42,18 +42,23 @@
             &::-webkit-scrollbar
                 display: none
 
-            li
+            a
+                text-decoration: none
+                color: inherit
                 width: 100%
-                padding: 1em 1.5em
+
+                li
+                    width: 100%
+                    padding: 1em 1.5em
                 
-                &.dark-hover
-                    color: $app-light-bg-color
-                    &:hover
-                        background-color: $app-dark-header-color
-                &.light-hover
-                    &:hover
-                        background-color: $app-light-header-color
-                        color: $app-header-color
+                    &.dark-hover
+                        color: $app-light-bg-color
+                        &:hover
+                            background-color: $app-dark-header-color
+                    &.light-hover
+                        &:hover
+                            background-color: $app-light-header-color
+                            color: $app-header-color
 
     &-squad
         width: 17em

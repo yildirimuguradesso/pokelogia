@@ -90,13 +90,53 @@
   background-color: #4d4d4d;
 }
 
-header {
+.app-detail {
   width: 100%;
-  height: 3.5em;
-  position: relative;
-  z-index: 2;
-  color: #f3f3f3;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  height: 80em;
   display: flex;
   flex-direction: column;
-}/*# sourceMappingURL=header.style.css.map */
+  align-items: center;
+}
+.app-detail-container {
+  width: 100%;
+  height: 100%;
+  padding: 5em;
+  display: flex;
+  flex-direction: row;
+}
+.app-detail-title-group {
+  width: 100%;
+  height: 15em;
+  display: flex;
+  flex-direction: row;
+}
+.app-detail-title {
+  font-size: 7em;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+.app-detail-title h2::first-letter {
+  text-transform: uppercase;
+}
+.app-detail-title span {
+  font-size: 1em;
+}
+.app-detail-image {
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.app-detail-row {
+  width: 50%;
+  font-size: 3em;
+  padding: 20px;
+}
+.app-detail-types {
+  width: 42%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}/*# sourceMappingURL=detail.style.css.map */

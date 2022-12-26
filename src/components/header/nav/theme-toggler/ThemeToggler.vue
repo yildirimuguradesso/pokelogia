@@ -7,12 +7,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 import { useThemeStore } from '../../../../stores/themeToggler';
 defineProps(['classPrefix'])
 const themeStore = useThemeStore()
 const toggleTheme = themeStore.toggleTheme
-console.log(themeStore.isThemeDark)
 
 </script>
 

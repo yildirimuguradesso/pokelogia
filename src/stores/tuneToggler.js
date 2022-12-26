@@ -19,7 +19,6 @@ export const useTuneStore = defineStore("tune",
             isPlaying.value ? audio.play() : audio.pause()
         })
 
-
         return { isPlaying, toggleTune }
     }
 )

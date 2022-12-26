@@ -21,6 +21,73 @@
 .light-section {
   background-color: #f3f3f3;
   transition: all linear 0.5s;
+  color: black;
+}
+
+.element {
+  padding: 5px;
+  border: 1px solid none;
+  border-radius: 20px;
+}
+
+.grass-bg {
+  background-color: green;
+}
+
+.fire-bg {
+  background-color: red;
+}
+
+.water-bg {
+  background-color: blue;
+}
+
+.poison-bg {
+  background-color: purple;
+}
+
+.electric-bg {
+  background-color: #ffcd32;
+}
+
+.flying-bg {
+  background-color: #5f77ae;
+}
+
+.ice-bg {
+  background-color: cyan;
+}
+
+.rock-bg {
+  background-color: brown;
+}
+
+.ground-bg {
+  background-color: #a6643b;
+}
+
+.steel-bg {
+  background-color: gray;
+}
+
+.dragon-bg {
+  background-color: #1d429a;
+}
+
+.psychic-bg {
+  background-color: magenta;
+}
+
+.ghost-bg {
+  background-color: #721d9a;
+}
+
+.dark-bg {
+  background-color: #141414;
+}
+
+.normal-bg {
+  background-color: #4d4d4d;
 }
 
 .search-area-container {
@@ -66,17 +133,22 @@
 .search-area-result-area-results::-webkit-scrollbar {
   display: none;
 }
-.search-area-result-area-results li {
+.search-area-result-area-results a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+.search-area-result-area-results a li {
   width: 100%;
   padding: 1em 1.5em;
 }
-.search-area-result-area-results li.dark-hover {
+.search-area-result-area-results a li.dark-hover {
   color: #f3f3f3;
 }
-.search-area-result-area-results li.dark-hover:hover {
+.search-area-result-area-results a li.dark-hover:hover {
   background-color: #1d429a;
 }
-.search-area-result-area-results li.light-hover:hover {
+.search-area-result-area-results a li.light-hover:hover {
   background-color: #EF5350;
   color: #f3f3f3;
 }

@@ -16,7 +16,6 @@
 <script setup>
 import { useTuneStore } from '../../../../stores/tuneToggler'
 // toRefs is used to make ref with seperated values
-// import {Howl, Howler} from 'howler';
 defineProps(['classPrefix'])
 const tuneStore = useTuneStore();
 

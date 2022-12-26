@@ -1,0 +1,45 @@
+@use "../partial/_colors" as *
+@use "../partial/_flex" as *
+    
+.app-detail
+    width: 100%
+    height: 80em
+    @include flex($display: flex, $direction: column, $justify: null)
+
+    &-container
+        width: 100%
+        height: 100%
+        padding: 5em
+        @include flex($display: flex, $direction: row, $justify: null, $align: null)
+
+    &-title-group
+        width: 100%
+        height: 15em
+        @include flex($display: flex, $direction: row, $justify: null, $align: null)
+
+    &-title
+        font-size: 7em
+        width: 80%
+        @include flex($display: flex, $direction: row, $justify: null, $align: null)
+
+        h2
+            &::first-letter
+                text-transform: uppercase
+
+        span
+            font-size: 1em
+    
+    &-image
+        width: 50%
+        position: relative
+        z-index: 1
+        object-fit: contain
+    
+    &-row
+        width: 50%
+        font-size: 3em
+        padding: 20px
+    
+    &-types
+        width: 42%
+        @include flex($display: flex, $direction: row, $justify: space-between, $align: null)
