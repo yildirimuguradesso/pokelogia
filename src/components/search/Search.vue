@@ -7,10 +7,10 @@
             </form>
             <div :class="classPrefix + '-result-area'">
                 <ul :class="classPrefix + '-result-area-results'" v-if="data">
-                    <li v-for="pokemon in data.results" :class="themeStore.isThemeDark ? 'dark-hover' : 'light-hover'">
-                        <span>
+                    <li v-for="(pokemon, index) in data.results" :class="themeStore.isThemeDark ? 'dark-hover' : 'light-hover'">
+                        <RouterLink :to="'/detail/' + (index + 1)">
                             {{ pokemon.name }}
-                        </span>
+                        </RouterLink>
                     </li>
                 </ul>
                 <span v-else>Loading...</span>
@@ -25,11 +25,11 @@ import { ref } from 'vue'
 import { useThemeStore } from '../../stores/themeToggler';
 import { useFetch } from '../../helper/fetch';
 
-const { data, error } = useFetch('https://pokeapi.co/api/v2/pokemon?limit=9999')
-
 const classPrefix = ref("search-area");
 const themeStore = useThemeStore();
 const userInput = ref(null)
+const baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=9999"
+const { data, error } = useFetch(baseUrl)
 
 const onUserInput = () => {
 

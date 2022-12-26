@@ -1,11 +1,10 @@
 <template>
     <nav :class="themeStore.isThemeDark ? 'dark dark-shadow' : 'light light-shadow'">
-        <div :class="classPrefix + '-logo'"/>
+        <RouterLink to="/" :class="classPrefix + '-logo'"/>
         <div :class="classPrefix + '-toggler-group'">
             <TuneTogglerVue :class-prefix="classPrefix"/>
             <ThemeTogglerVue :class-prefix="classPrefix"/>
         </div>
-        <!-- <RouterLink to="/">Home</RouterLink> -->
     </nav>
 </template>
 
