@@ -1,0 +1,32 @@
+@use "../../partial/_colors" as *
+@use "../../partial/_flex" as *
+
+nav
+    width: 100%
+    height: 12%
+    padding: 5px
+    position: relative
+    z-index: 1
+    box-shadow: $header-shadow
+    @include flex($display: flex, $direction: row, $justify: space-between, $align: center)
+
+.app-nav
+    &-logo 
+        width: 6em
+        height: 100%
+        padding: 5px
+        background: url('../../../../../public/assets/img/pokelogia.png')
+        background-size: cover
+
+    &-toggler-group
+        width: 11em
+        height: 100%
+        @include flex($display: flex, $direction: row, $justify: space-between, $align: center)
+    
+    &-tune-toggler
+        width: 2em
+        height: 1.5em
+
+    &-theme-toggler
+        width: 8em
+        height: 2em

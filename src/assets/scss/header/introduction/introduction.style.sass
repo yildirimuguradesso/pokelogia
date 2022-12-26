@@ -1,0 +1,57 @@
+@use "../../partial/_colors" as *
+@use "../../partial/_flex" as *
+
+.app-header
+    &-introduction
+        width: 100%
+        height: 90%
+        background-color: $app-main-bg-color
+        @include flex($display: flex, $direction: column, $justify: center, $align: center)
+
+    &-logo
+        width: 400px
+        height: 150px
+        background-size: contain
+
+    &-group
+        @include flex($display: flex, $direction: column, $justify: space-around, $align: center)
+
+.city-transition
+    width: 100%
+    height: 100%
+
+    &-paused
+        &::before 
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: .4
+            z-index: 0
+            background: url('src/assets/img/pokemon-city.jpeg') repeat
+            background-size: cover
+            animation: train 100000s linear infinite
+            animation-play-state: paused
+
+    &-playing
+        &::before 
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            opacity: .4
+            z-index: 0
+            background: url('src/assets/img/pokemon-city.jpeg') repeat
+            background-size: cover
+            animation: train 100000s linear infinite
+            animation-play-state: playing
+
+            @keyframes train
+                0%
+                    background-position: 0 0
+                100%
+                    background-position: 10000000px 0

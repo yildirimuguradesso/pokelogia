@@ -1,0 +1,97 @@
+.dark {
+  background-color: #1d429a;
+  transition: all linear 0.5s;
+}
+
+.light {
+  background-color: #EF5350;
+  transition: all linear 0.5s;
+}
+
+.lighter {
+  background-color: #0c204e;
+  transition: all linear 0.5s;
+}
+
+.dark-section {
+  background-color: #2e2e2e;
+  transition: all linear 0.5s;
+}
+
+.light-section {
+  background-color: #f3f3f3;
+  transition: all linear 0.5s;
+}
+
+.search-area-container {
+  width: 100%;
+  height: 50em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search-area-group {
+  width: 40%;
+  height: 20em;
+}
+.search-area-group form {
+  width: 100%;
+  height: 20%;
+}
+.search-area-group form input {
+  width: 100%;
+  height: 100%;
+  padding: 1.5em;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.search-area-group form input:focus {
+  outline: none;
+}
+.search-area-result-area {
+  width: 100%;
+  height: 80%;
+}
+.search-area-result-area-results {
+  width: inherit;
+  height: 100%;
+  padding: 0;
+  color: black;
+  list-style: none;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.search-area-result-area-results::-webkit-scrollbar {
+  display: none;
+}
+.search-area-result-area-results li {
+  width: 100%;
+  padding: 1em 1.5em;
+}
+.search-area-result-area-results li.dark-hover {
+  color: #f3f3f3;
+}
+.search-area-result-area-results li.dark-hover:hover {
+  background-color: #1d429a;
+}
+.search-area-result-area-results li.light-hover:hover {
+  background-color: #EF5350;
+  color: #f3f3f3;
+}
+.search-area-squad {
+  width: 17em;
+  height: 13em;
+  margin-top: 3em;
+  background: url("../../../../public/assets/img/gen1squad.png") no-repeat;
+  background-size: contain;
+}
+
+.dark-shadow {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(131, 113, 132, 0.67) 0px 2px 6px 2px;
+}
+
+.light-shadow {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}/*# sourceMappingURL=search.style.css.map */
