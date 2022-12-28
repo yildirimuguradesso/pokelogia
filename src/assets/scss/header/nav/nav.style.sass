@@ -2,12 +2,12 @@
 @use "../../partial/_flex" as *
 
 nav
-    width: 100%
+    width: 70%
     height: 100%
     padding: 5px
     position: relative
     z-index: 1
-    box-shadow: $header-shadow
+    margin: 0 auto
     @include flex($display: flex, $direction: row, $justify: space-between, $align: center)
 
 .app-nav
@@ -15,7 +15,7 @@ nav
         width: 6em
         height: 100%
         padding: 5px
-        background: url('../../../../../public/assets/img/pokelogia.png')
+        background: url('../../../../../src/assets/img/pokelogia.png')
         background-size: cover
 
     &-toggler-group

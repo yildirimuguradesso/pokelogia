@@ -3,23 +3,35 @@
     
 .app-detail
     width: 100%
-    height: 80em
+    height: 95em
     @include flex($display: flex, $direction: column, $justify: null)
 
     &-container
+        width: 70%
+        margin: 10em 0
+        @include flex($display: flex, $direction: column, $justify: null, $align: null)
+
+    &-top-wrapper
         width: 100%
-        height: 100%
-        padding: 5em
+        text-align: end
         @include flex($display: flex, $direction: row, $justify: null, $align: null)
+
+    &-sprites-wrapper
+        width: 100%
+        padding: 1em
+        @include flex($display: flex, $direction: row, $justify: flex-end, $align: null)
+
+        div
+            img
+                margin-left: 1em
 
     &-title-group
         width: 100%
-        height: 15em
-        @include flex($display: flex, $direction: row, $justify: null, $align: null)
+        @include flex($display: flex, $direction: row, $justify: center, $align: null)
 
     &-title
-        font-size: 7em
-        width: 80%
+        font-size: 3em
+        width: 70%
         @include flex($display: flex, $direction: row, $justify: null, $align: null)
 
         h2
@@ -29,17 +41,48 @@
         span
             font-size: 1em
     
+    &-image-container
+        width: 45%
+        padding: 2em
+
     &-image
-        width: 50%
+        width: 100%
         position: relative
         z-index: 1
-        object-fit: contain
+        object-fit: cover
     
     &-row
-        width: 50%
-        font-size: 3em
+        width: 55%
+        font-size: 2em
         padding: 20px
     
     &-types
-        width: 42%
-        @include flex($display: flex, $direction: row, $justify: space-between, $align: null)
+        width: 100%
+        font-size: 0.7em
+        color: $app-header-color
+        @include flex($display: flex, $direction: row, $justify: flex-end, $align: null)
+
+        span
+            padding: 5px 20px
+            margin-left: 10px
+    
+    &-stats
+        margin-top: 0.6em
+
+    &-moves-wrapper
+        width: 100%
+        height: 25em
+        overflow: auto
+        -ms-overflow-style: none
+        scrollbar-width: none
+
+        ul
+            width: 100%
+            padding: 0
+            list-style: none
+
+            li
+                width: 100%
+                padding: 1em
+
+        

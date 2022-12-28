@@ -1,5 +1,6 @@
 .dark {
-  background-color: #1d429a;
+  background-color: #030d24;
+  color: #f3f3f3;
   transition: all linear 0.5s;
 }
 
@@ -13,8 +14,16 @@
   transition: all linear 0.5s;
 }
 
+.dark-color {
+  color: #f3f3f3;
+}
+
+.light-color {
+  color: #141414;
+}
+
 .dark-section {
-  background-color: #2e2e2e;
+  background-color: #0b1836;
   transition: all linear 0.5s;
 }
 
@@ -58,6 +67,10 @@
   background-color: cyan;
 }
 
+.bug-bg {
+  background-color: #00e626;
+}
+
 .rock-bg {
   background-color: brown;
 }
@@ -92,27 +105,42 @@
 
 .app-detail {
   width: 100%;
-  height: 80em;
+  height: 95em;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .app-detail-container {
+  width: 70%;
+  margin: 10em 0;
+  display: flex;
+  flex-direction: column;
+}
+.app-detail-top-wrapper {
   width: 100%;
-  height: 100%;
-  padding: 5em;
+  text-align: end;
   display: flex;
   flex-direction: row;
+}
+.app-detail-sprites-wrapper {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.app-detail-sprites-wrapper div img {
+  margin-left: 1em;
 }
 .app-detail-title-group {
   width: 100%;
-  height: 15em;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .app-detail-title {
-  font-size: 7em;
-  width: 80%;
+  font-size: 3em;
+  width: 70%;
   display: flex;
   flex-direction: row;
 }
@@ -122,21 +150,50 @@
 .app-detail-title span {
   font-size: 1em;
 }
+.app-detail-image-container {
+  width: 45%;
+  padding: 2em;
+}
 .app-detail-image {
-  width: 50%;
+  width: 100%;
   position: relative;
   z-index: 1;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .app-detail-row {
-  width: 50%;
-  font-size: 3em;
+  width: 55%;
+  font-size: 2em;
   padding: 20px;
 }
 .app-detail-types {
-  width: 42%;
+  width: 100%;
+  font-size: 0.7em;
+  color: #f3f3f3;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
+}
+.app-detail-types span {
+  padding: 5px 20px;
+  margin-left: 10px;
+}
+.app-detail-stats {
+  margin-top: 0.6em;
+}
+.app-detail-moves-wrapper {
+  width: 100%;
+  height: 25em;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.app-detail-moves-wrapper ul {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+}
+.app-detail-moves-wrapper ul li {
+  width: 100%;
+  padding: 1em;
 }/*# sourceMappingURL=detail.style.css.map */

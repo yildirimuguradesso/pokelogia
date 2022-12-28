@@ -36,6 +36,7 @@ watchEffect(() => {
     themeImg = themeStore.isThemeDark ? "src/assets/img/blue-version.png" : "src/assets/img/red-version.png";
     tuneStatus = tuneStore.isPlaying ? "-playing" : "-paused";
 })
+
 </script>
 
 <style lang="sass">

@@ -10,6 +10,7 @@ $water-type: blue
 $poison-type: purple
 $electric-type: #ffcd32
 $flying-type: #5f77ae
+$bug-type: #00e626
 $ice-type: cyan
 $rock-type: brown
 $ground-type: #a6643b
@@ -21,7 +22,7 @@ $dark-type: #141414
 $normal-type: #4d4d4d
 
 // Theme Colors
-$app-dark-header-color: $dragon-type
+$app-dark-header-color: #030d24
 $app-light-header-color: $app-main-bg-color
 $app-lighter-intro-color: #0c204e
 $app-dark-bg-color: #2e2e2e
@@ -29,6 +30,7 @@ $app-light-bg-color: $app-header-color
 
 .dark
     background-color: $app-dark-header-color
+    color: $app-light-bg-color
     transition: all linear 0.5s
 .light
     background-color: $app-light-header-color
@@ -38,8 +40,14 @@ $app-light-bg-color: $app-header-color
     background-color: $app-lighter-intro-color
     transition: all linear 0.5s
 
+.dark-color
+    color: $app-header-color
+
+.light-color
+    color: $dark-type
+
 .dark-section
-    background-color: $app-dark-bg-color
+    background-color: #0b1836
     transition: all linear 0.5s
 
 .light-section
@@ -54,7 +62,6 @@ $app-light-bg-color: $app-header-color
 
 .grass-bg
     background-color: $grass-type
-
 
 .fire-bg
     background-color: $fire-type
@@ -73,6 +80,9 @@ $app-light-bg-color: $app-header-color
 
 .ice-bg
     background-color: $ice-type
+
+.bug-bg
+    background-color: $bug-type
 
 .rock-bg
     background-color: $rock-type

@@ -1,5 +1,6 @@
 .dark {
-  background-color: #1d429a;
+  background-color: #030d24;
+  color: #f3f3f3;
   transition: all linear 0.5s;
 }
 
@@ -13,8 +14,16 @@
   transition: all linear 0.5s;
 }
 
+.dark-color {
+  color: #f3f3f3;
+}
+
+.light-color {
+  color: #141414;
+}
+
 .dark-section {
-  background-color: #2e2e2e;
+  background-color: #0b1836;
   transition: all linear 0.5s;
 }
 
@@ -58,6 +67,10 @@
   background-color: cyan;
 }
 
+.bug-bg {
+  background-color: #00e626;
+}
+
 .rock-bg {
   background-color: brown;
 }
@@ -91,12 +104,12 @@
 }
 
 nav {
-  width: 100%;
+  width: 70%;
   height: 100%;
   padding: 5px;
   position: relative;
   z-index: 1;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -107,7 +120,7 @@ nav {
   width: 6em;
   height: 100%;
   padding: 5px;
-  background: url("../../../../../public/assets/img/pokelogia.png");
+  background: url("../../../../../src/assets/img/pokelogia.png");
   background-size: cover;
 }
 .app-nav-toggler-group {

@@ -2,14 +2,39 @@
     <section :class="classPrefix + '-container' + (themeStore.isThemeDark ? ' dark-section' : ' light-section')">
         <div :class="classPrefix + '-group' + (themeStore.isThemeDark ? ' dark-section dark-shadow' : ' light-section light-shadow') ">
             <form>
-                <input :class="themeStore.isThemeDark ? 'dark-section' : 'light-section'" type="search" placeholder="Search your pokémon..." v-model="userInput"/>
-                <span>{{ userInput }}</span>
+                <input 
+                    :class="themeStore.isThemeDark ? 'dark-section dark-color' : 'light-section light-color'" 
+                    type="search" 
+                    placeholder="Search your pokémon..."
+                    v-model="userInput"
+                />
             </form>
-            <div :class="classPrefix + '-result-area'">
-                <ul :class="classPrefix + '-result-area-results'" v-if="data">
-                    <RouterLink :to="'/detail/' + (index + 1)" v-for="(pokemon, index) in data.results">
-                        <li :to="'/detail/' + (index + 1)" :class="themeStore.isThemeDark ? 'dark-hover' : 'light-hover'">
-                            {{ pokemon.name }}
+            <div :class="classPrefix + '-result-area' + (themeStore.isThemeDark ? ' dark-shadow' : ' light-shadow')">
+                <ul 
+                    :class="classPrefix + '-result-area-results'"
+                    v-if="data && filteredPokemons == undefined"
+                >
+                    <RouterLink 
+                        :to="'/detail/' + (pokemon.name)" 
+                        v-for="pokemon in data.results"
+                    >
+                        <li 
+                            :to="'/detail/' + (pokemon.name)" 
+                            :class="themeStore.isThemeDark ? 'dark-hover' : 'light-hover'">
+                                {{ pokemon.name }}
+                        </li>
+                    </RouterLink>
+                </ul>
+                <ul 
+                    :class="classPrefix + '-result-area-results'" v-else-if="filteredPokemons"
+                >
+                    <RouterLink 
+                        :to="'/detail/' + (pokemon.name)" 
+                        v-for="pokemon in filteredPokemons"
+                    >
+                        <li 
+                            :class="themeStore.isThemeDark ? 'dark-hover' : 'light-hover'">
+                                {{ pokemon.name }}
                         </li>
                     </RouterLink>
                 </ul>
@@ -21,25 +46,21 @@
 </template>
 
 <script setup>
-import { ref, watchEffect, reactive } from 'vue'
+import { ref, reactive, watch } from 'vue'
 import { useThemeStore } from '../../stores/themeToggler';
 import { useFetch } from '../../helper/fetch';
 
 const classPrefix = ref("search-area");
 const themeStore = useThemeStore();
-let userInput = ref(null)
 const baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=9999"
 const { data, error } = useFetch(baseUrl)
-let newFilteredPokemons
+let userInput = ref("")
+let filteredPokemons = reactive()
 
-
-watchEffect(() => {
-    if(data.results) {
-        newFilteredPokemons = data.results.filter((pokemon) => {
-            return pokemon.name.toLocaleLowerCase().includes(userInput.value);
-        })
-
-    }
+watch(userInput, (newInput, oldInput) => {
+    filteredPokemons = data.value.results.filter(pokemon => {
+        return pokemon.name.toLocaleLowerCase().includes(newInput)
+    })
 })
 
 </script>

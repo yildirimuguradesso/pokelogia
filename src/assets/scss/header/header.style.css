@@ -1,5 +1,6 @@
 .dark {
-  background-color: #1d429a;
+  background-color: #030d24;
+  color: #f3f3f3;
   transition: all linear 0.5s;
 }
 
@@ -13,8 +14,16 @@
   transition: all linear 0.5s;
 }
 
+.dark-color {
+  color: #f3f3f3;
+}
+
+.light-color {
+  color: #141414;
+}
+
 .dark-section {
-  background-color: #2e2e2e;
+  background-color: #0b1836;
   transition: all linear 0.5s;
 }
 
@@ -56,6 +65,10 @@
 
 .ice-bg {
   background-color: cyan;
+}
+
+.bug-bg {
+  background-color: #00e626;
 }
 
 .rock-bg {
